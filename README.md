@@ -10,3 +10,20 @@
 yum install python3 python3-pip -y
 pip3 install pyyaml paramiko psutil click openpyxl
 ```
+
+## 学习进度
+### ✅ Day1 文件IO + os模块 + 批量SSH实战
+#### 实现功能
+1. basic/hosts.txt：统一存放服务器IP、账号、密码，支持#注释、空行排版
+2. basic/host_list.py：封装get_host_list()读取函数，自动过滤无效行，返回结构化主机字典列表
+3. basic/ssh_batch.py：导入读取函数，循环批量ssh登录服务器执行磁盘df -h巡检
+#### 本次新增文件
+- basic/hosts.txt
+- basic/host_list.py
+- basic/ssh_batch.py
+
+## 仓库推送规范
+# 同步推送到Gitee master分支
+git push gitee master
+# 同步推送到GitHub main分支（本地master映射远程main）
+git push github master:main
