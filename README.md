@@ -27,3 +27,12 @@ pip3 install pyyaml paramiko psutil click openpyxl
 git push gitee master
 # 同步推送到GitHub main分支（本地master映射远程main）
 git push github master:main
+
+### ✅ Day2 subprocess磁盘巡检告警
+#### 实现功能
+1. 使用subprocess.run调用df -h获取服务器磁盘信息
+2. 内置超时保护、命令异常捕获
+3. 阈值80%，超阈值终端红色告警，正常绿色输出
+4. 自动生成格式化巡检报表 disk_report.txt
+#### 新增文件
+- basic/disk_check.py
