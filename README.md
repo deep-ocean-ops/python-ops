@@ -22,11 +22,6 @@ pip3 install pyyaml paramiko psutil click openpyxl
 - basic/host_list.py
 - basic/ssh_batch.py
 
-## 仓库推送规范
-# 同步推送到Gitee master分支
-git push gitee master
-# 同步推送到GitHub main分支（本地master映射远程main）
-git push github master:main
 
 ### ✅ Day2 subprocess磁盘巡检告警
 #### 实现功能
