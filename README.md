@@ -31,3 +31,14 @@ pip3 install pyyaml paramiko psutil click openpyxl
 4. 自动生成格式化巡检报表 disk_report.txt
 #### 新增文件
 - basic/disk_check.py
+
+### ✅ Day3 psutil本地资源采集 + JSON持久化存储
+#### 实现功能
+1. psutil库无shell调用采集CPU、内存、磁盘全量指标
+2. 自动过滤tmpfs临时磁盘分区，只保留物理磁盘
+3. json.dump 将监控数据序列化存入 metric.json 持久化
+4. json.load 读取本地监控文件，格式化打印资源报表
+5. 自动换算内存/磁盘GB单位，增加采集时间戳
+#### 新增文件
+- basic/local_metric.py
+- basic/metric.json（程序自动生成，无需手动创建）
