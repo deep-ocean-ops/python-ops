@@ -42,3 +42,14 @@ pip3 install pyyaml paramiko psutil click openpyxl
 #### 新增文件
 - basic/local_metric.py
 - basic/metric.json（程序自动生成，无需手动创建）
+
+### ✅ Day4 re正则 日志错误过滤与统计
+#### 实现功能
+1. 内置re正则模块读取日志，匹配 error/fail/500 错误关键字
+2. 自动过滤空行，统计全部错误日志总行数
+3. 正则分组提取错误类型，字典统计每种错误出现频次
+4. 按频次倒序输出Top10高频错误排行
+5. 完整打印所有原始错误日志，便于问题排查
+#### 新增文件
+- basic/log_analysis.py
+- basic/app.log（测试日志文件）
