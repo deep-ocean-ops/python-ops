@@ -53,3 +53,15 @@ pip3 install pyyaml paramiko psutil click openpyxl
 #### 新增文件
 - basic/log_analysis.py
 - basic/app.log（测试日志文件）
+
+### ✅ Day5 PyYAML 读写批量生成K8s Namespace资源
+#### 实现功能
+1. PyYAML模块safe_load读取配置ns_list.yaml，统一管理多环境命名空间
+2. 内置K8s v1标准Namespace模板，批量生成独立资源yaml
+3. 自动创建输出目录，每个namespace单独生成清单文件
+4. safe_dump输出标准格式化K8s yaml，字段顺序符合集群规范，直接kubectl apply部署
+#### 新增文件
+- basic/k8s_ns_create.py
+- basic/ns_list.yaml
+#### 自动生成（gitignore忽略，不提交仓库）
+- basic/k8s_ns_yaml/ 目录（生成的K8s资源清单）

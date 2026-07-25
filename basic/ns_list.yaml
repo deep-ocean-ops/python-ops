@@ -1,0 +1,10 @@
+# K8s多环境Namespace配置列表
+namespace:
+  - dev
+  - test
+  - staging
+  - prod
+  - ops-monitor
+labels:
+  env: k8s-cluster-01
+  owner: devops-team
