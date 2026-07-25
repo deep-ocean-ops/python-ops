@@ -63,5 +63,3 @@ pip3 install pyyaml paramiko psutil click openpyxl
 #### 新增文件
 - basic/k8s_ns_create.py
 - basic/ns_list.yaml
-#### 自动生成（gitignore忽略，不提交仓库）
-- basic/k8s_ns_yaml/ 目录（生成的K8s资源清单）
