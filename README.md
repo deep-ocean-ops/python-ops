@@ -63,3 +63,13 @@ pip3 install pyyaml paramiko psutil click openpyxl
 #### 新增文件
 - basic/k8s_ns_create.py
 - basic/ns_list.yaml
+
+### ✅ Day6 统一告警工具函数封装
+#### 实现功能
+1. 封装通用send_alert告警函数，支持4种等级：info/success/warn/error
+2. 终端分级彩色输出，自动记录告警日志到alert_record.log
+3. 支持默认参数控制是否持久化日志，灵活调试
+4. 全局统一颜色常量，所有历史脚本可导入复用，消除重复打印代码
+5. 统一告警入口，后续扩展邮件/钉钉告警仅修改本文件即可
+#### 新增文件
+- basic/alert_func.py
