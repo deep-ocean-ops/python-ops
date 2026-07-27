@@ -73,3 +73,14 @@ pip3 install pyyaml paramiko psutil click openpyxl
 5. 统一告警入口，后续扩展邮件/钉钉告警仅修改本文件即可
 #### 新增文件
 - basic/alert_func.py
+
+### ✅ Day7 try-except 异常处理 脚本容错加固
+#### 实现功能
+1. 改造Day2磁盘巡检脚本，全链路多层try-except异常捕获
+2. 精准捕获：命令超时、权限不足、文件读写失败、数据格式解析错误
+3. 自定义业务异常：磁盘命令异常、磁盘数据解析异常，区分故障类型
+4. 错误信息单独持久化到 error.log，和普通业务日志隔离
+5. 顶层全局异常兜底，防止脚本直接崩溃退出
+6. 复用Day6统一告警函数，异常终端红色提示
+#### 新增文件
+- basic/safe_monitor.py
