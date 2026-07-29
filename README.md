@@ -84,3 +84,15 @@ pip3 install pyyaml paramiko psutil click openpyxl
 6. 复用Day6统一告警函数，异常终端红色提示
 #### 新增文件
 - basic/safe_monitor.py
+
+### ✅ Day8 列表/字典高阶：服务器分组管理
+#### 实现功能
+1. 嵌套字典存储多环境服务器分组（dev/test/prod），单台主机存储IP/账号/机房/业务标签
+2. 两种筛选方案：列表推导式、filter高阶函数过滤生产环境主机
+3. 打印全环境分组报表 + 单独生产环境明细报表
+4. 自动导出生产服务器清单 prod_server_list.txt
+5. 复用Day6统一告警函数输出分级提示，增加文件写入异常捕获
+#### 新增文件
+- basic/host_group.py
+#### 自动生成（gitignore忽略）
+- basic/prod_server_list.txt
