@@ -96,3 +96,19 @@ pip3 install pyyaml paramiko psutil click openpyxl
 - basic/host_group.py
 #### 自动生成（gitignore忽略）
 - basic/prod_server_list.txt
+
+### ✅ Day9 sys.argv 命令行传参：脚本动态入参
+#### 实现功能
+1. 使用sys.argv接收命令行双参数：主机清单文件 + 目标环境
+2. 多层参数校验：参数数量、文件存在性、环境合法性拦截错误
+3. 读取hosts.txt构建多环境服务器分组，根据传入环境动态筛选
+4. 打印目标环境主机明细，自动生成对应环境独立报表
+5. 复用Day6告警工具，异常友好提示，错误状态码退出
+#### 使用示例
+python3 arg_monitor.py hosts.txt prod
+python3 arg_monitor.py hosts.txt test
+#### 新增文件
+- basic/arg_monitor.py
+- basic/hosts.txt
+#### 自动生成（gitignore忽略）
+- basic/dev_server_report.txt / test_server_report.txt / prod_server_report.txt
