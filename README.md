@@ -112,3 +112,19 @@ python3 arg_monitor.py hosts.txt test
 - basic/hosts.txt
 #### 自动生成（gitignore忽略）
 - basic/dev_server_report.txt / test_server_report.txt / prod_server_report.txt
+
+### ✅ Day10 循环进阶：批量生成测试日志文件
+#### 实现功能
+1. for + range 循环批量生成指定行数模拟业务日志
+2. 70%正常日志 / 30%错误日志，包含error、500、fail关键字
+3. 随机生成时间戳、耗时、任务ID，贴近真实应用日志格式
+4. 支持命令行传参自定义日志条数，默认生成100行
+5. 附带while循环示例，对比两种循环使用场景
+6. 产出app_sim.log，作为日志分析脚本标准测试数据源
+#### 使用示例
+python3 gen_log.py       # 默认100行
+python3 gen_log.py 200   # 自定义200行日志
+#### 新增文件
+- basic/gen_log.py
+#### gitignore忽略文件
+- basic/app_sim.log
