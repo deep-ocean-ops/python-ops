@@ -128,3 +128,15 @@ python3 gen_log.py 200   # 自定义200行日志
 - basic/gen_log.py
 #### gitignore忽略文件
 - basic/app_sim.log
+
+### ✅ Day11 面向对象基础：封装监控类
+#### 实现功能
+1. 使用class定义Monitor监控类，__init__构造函数初始化告警阈值
+2. 封装内存、磁盘采集实例方法，基于psutil采集系统指标
+3. 统一入口run_all_check()一键执行整机巡检
+4. 支持创建多个独立实例，配置不同告警阈值
+5. 联动Day6告警工具，指标超限自动输出告警
+#### 使用示例
+python3 MonitorClass.py
+#### 新增文件
+- basic/MonitorClass.py
